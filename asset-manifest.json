@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Firebase-React-Project/static/css/main.ea8ce8d3.css",
+    "main.js": "/Firebase-React-Project/static/js/main.eb3c3aa1.js",
+    "index.html": "/Firebase-React-Project/index.html",
+    "main.ea8ce8d3.css.map": "/Firebase-React-Project/static/css/main.ea8ce8d3.css.map",
+    "main.eb3c3aa1.js.map": "/Firebase-React-Project/static/js/main.eb3c3aa1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea8ce8d3.css",
+    "static/js/main.eb3c3aa1.js"
+  ]
+}
