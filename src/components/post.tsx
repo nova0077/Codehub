@@ -5,7 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { IPost } from "../models/Post";
 import { ILike } from "../models/Like";
 import { Comment } from './comment'
-
+import "../styles/post.css"
 
 
 interface Props {
@@ -106,24 +106,32 @@ export const Post = (props: Props) => {
   }, []);
 
   return (
-    <div>
-      <div className="title">
-        <h1>{post.title}</h1>
+    <div className="post-container">
+      <div className="post-info">
+        <div className="post-title">
+          <h1>{post.title}</h1>
+        </div>
+        <div className="post-author">
+          <p>@{post.username}</p>
+        </div>
       </div>
-      <div className="body">
-        <p> {post.description}</p>
+      <div className="post-body">
+        <p>{post.description}</p>
       </div>
-      <div className="footer">
-        <p>@{post.username}</p>
-        <button onClick={hasUserLiked ? removeLike : addLike}>
+      <div className="action-buttons">
+        <button className="like" onClick={hasUserLiked ? removeLike : addLike}>
           {hasUserLiked ? <>&#128078;</> : <>&#128077;</>}
         </button>
-        <button onClick={bookmarked ? removeBookmark : addBookmark}>
+        <button className="bookmark" onClick={bookmarked ? removeBookmark : addBookmark}>
           {bookmarked ? "Remove Bookmark" : "Bookmark"}
         </button>
-        {likes && <p> Likes: {likes.length}</p>}
+        {likes && <p className="likes-count">Likes: {likes.length}</p>}
       </div>
-      <Comment postId={post.id} user={user || { uid: null, displayName: null, email: null }} />
+      <div className="comment-section">
+        <Comment postId={post.id} user={user || { uid: null, displayName: null, email: null }} />
+      </div>
     </div>
+
+
   );
 };

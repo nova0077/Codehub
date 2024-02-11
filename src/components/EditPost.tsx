@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getDoc, doc, updateDoc } from 'firebase/firestore';
 import { db } from '../config/firebase';
-
+import "../styles/editpost.css"
 
 const EditPost: React.FC = () => {
   const { postId } = useParams<any>();
@@ -30,8 +30,7 @@ const EditPost: React.FC = () => {
   }, [postId]);
 
   const handleSaveChanges = async () => {
-    if(postId)
-    {
+    if (postId) {
       const postDoc = doc(db, 'posts', postId);
       await updateDoc(postDoc, { description: postContent }); // Update with the actual field to be edited
 
@@ -42,11 +41,21 @@ const EditPost: React.FC = () => {
   };
 
   return (
-    <div>
-      <h1>Edit Post</h1>
-      <textarea value={postContent} onChange={(e) => setPostContent(e.target.value)} />
-      <button onClick={handleSaveChanges}>Save Changes</button>
+    <div className="edit-post-container">
+      <h1 className="edit-post-title">Edit Post</h1>
+      <textarea
+        className="edit-post-textarea"
+        value={postContent}
+        onChange={(e) => setPostContent(e.target.value)}
+      />
+      <button
+        className="save-changes-button"
+        onClick={handleSaveChanges}
+      >
+        Save Changes
+      </button>
     </div>
+
   );
 };
 

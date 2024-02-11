@@ -1,0 +1,75 @@
+/* Add your own styling as needed */
+
+.login-container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 10vw;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-header {
+  text-align: center;
+}
+
+.login-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}
+
+.login-switch {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-switch-button {
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.login-switch-button:hover {
+  background-color: #00688B;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 600px) {
+  .login-container {
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .login-input {
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+
+  .login-button {
+    padding: 8px;
+  }
+}

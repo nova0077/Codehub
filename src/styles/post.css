@@ -1,0 +1,114 @@
+/* Add your own styling as needed */
+
+.post-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 3vw;
+  margin: 40px auto;
+  max-width: 500px;
+  background-color: #f9f9f9;
+}
+
+.post-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #3498db;
+  /* Blue color for title */
+}
+
+.post-body {
+  margin-bottom: 2vw;
+  color: #555;
+}
+
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-author {
+  font-style: italic;
+  color: #777;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-buttons button {
+  font-size: 1rem;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.action-buttons button.like {
+  background-color: #2ecc71;
+  /* Green color for like button */
+  color: #fff;
+}
+
+.action-buttons button.like:hover {
+  background-color: #27ae60;
+}
+
+.action-buttons button.bookmark {
+  background-color: #e74c3c;
+  /* Red color for bookmark button */
+  color: #fff;
+}
+
+.action-buttons button.bookmark:hover {
+  background-color: #c0392b;
+}
+
+.comment-section {
+  margin-top: 10px;
+}
+
+.comment-container {
+  padding: 10px;
+  background-color: #ecf0f1;
+  /* Light gray background for comments */
+  margin-bottom: 10px;
+}
+
+.comment-text {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 600px) {
+  .post-container {
+    padding: 3vw;
+  }
+
+  .post-title {
+    font-size: 2px;
+    margin-bottom: 4px;
+  }
+
+  .post-body {
+    margin-bottom: 1.5vw;
+  }
+
+  .post-info {
+    gap: 6px;
+  }
+
+  .action-buttons button {
+    padding: 8px;
+  }
+
+  .comment-container {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+}

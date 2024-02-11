@@ -5,6 +5,7 @@ import { IPost } from '../../models/Post';
 import { PostList } from '../../components/PostList';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from 'react-router-dom';
+import "../../styles/mypost.css"
 
 export const MyPosts = () => {
   const [user] = useAuthState(auth);
@@ -30,15 +31,16 @@ export const MyPosts = () => {
   }, []);
 
   return (
-    <div>
+    <div className="my-posts-container">
       {postsList?.map((post) => (
-        <div key={post.id}>
-          <h2>{post.title}</h2>
-          <p>{post.description}</p>
-          <p>@{post.username}</p>
-          <button onClick={() => handleEditPost(post.id)}>Edit</button>
+        <div className="post-card" key={post.id}>
+          <h2 className="post-title">{post.title}</h2>
+          <p className="post-body">{post.description}</p>
+          <p className="post-author">@{post.username}</p>
+          <button className="edit-button" onClick={() => handleEditPost(post.id)}>Edit</button>
         </div>
       ))}
     </div>
+
   );
 };
