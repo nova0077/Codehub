@@ -1,10 +1,18 @@
 {
   "hosting": {
-    "public": "build",
+    "site":"novaa-codehub",
+    "public": "public",
+    "build": "build",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.tsx"
+      }
     ]
   }
 }
